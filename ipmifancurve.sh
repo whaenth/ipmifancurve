@@ -9,7 +9,7 @@ read -p "Password: " password
 read -p "IP Address: " ipaddress
 
 getExhaustTemp () {
-	$exhaustTemp = ipmitool -I lanplus -H $ipaddress -U $username -P $password sdr type temperature | awk 'NR==2 {print $10}'
+	$exhaustTemp=ipmitool -I lanplus -H $ipaddress -U $username -P $password sdr type temperature | awk 'NR==2 {print $10}'
 }
 
 for i in {1..5};
